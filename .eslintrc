@@ -1,0 +1,35 @@
+{
+  "extends": "eslint-config-airbnb",
+
+  "env": {
+    "mocha": true,
+  },
+
+  "globals": {
+    "browser": true,
+    "expect": true,
+    "assert": true,
+  },
+
+  "rules": {
+    "new-cap": 0,
+    "dot-notation": 0,
+    "no-loop-func": 0,
+    "quotes": [1, "double"],
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "react/sort-comp": [2, {
+      "order": [
+        "lifecycle",
+        "/^on.+$/",
+        "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
+        "everything-else",
+        "/^render.+$/",
+        "render"
+      ]
+    }],
+    "react/no-multi-comp": 0,
+    "no-else-return": 0,
+    "no-unused-vars": [2, {"vars": "all", "args": "after-used"}],
+    "no-undef": 1,
+  },
+}
